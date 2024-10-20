@@ -86,6 +86,18 @@ public class LinkedList {
         }
     }
 
+    public void removeLast() {
+        if (head == null) {
+            System.out.println("The list is already empty");
+        } else {
+            Node n = head;
+            while (n.next.next != null) {
+                n = n.next;
+            }
+            n.next = null;
+        }
+    }
+
     public void printList() {
         
         if (head == null) {
